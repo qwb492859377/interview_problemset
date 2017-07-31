@@ -5,6 +5,7 @@
 #include <climits>
 using namespace std;
 
+/*nlogn求链表的归并排序*/
 struct Link {
     int val;
     Link *next;
