@@ -19,8 +19,8 @@ void MergeSort(int A[], int l, int r) {
     int now = l, pl = l, pr = mid + 1;
     while(pl <= mid || pr <= r) {
         if(pl > mid) B[now++] = A[pr++];
-        if(pr > r) B[now++] = A[pl++];
-        if(A[pl] < A[pr]) B[now++] = A[pl++];
+        else if(pr > r) B[now++] = A[pl++];
+        else if(A[pl] < A[pr]) B[now++] = A[pl++];
         else B[now++] = A[pr++];
     }
     for(int i = l; i <= r; i++) A[i] = B[i];
